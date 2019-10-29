@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
-
+{% block title 'Produits triés' %}
 {% block body %}
     <div class="container">
-        <h1>Liste de produits</h1>
+        <h1>Liste de produits triés par prix</h1>
         <div class="row">
             {% for product in products %}
                 <div class="col-md-4 mt-3">
@@ -21,3 +21,4 @@
         </div>
     </div>
 {% endblock %}
+

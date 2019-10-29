@@ -28,6 +28,14 @@ class ProductRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findByAsc(){
+        return $this->createQueryBuilder('p')
+            ->setMaxResults(10)
+            ->addOrderBy('p.price', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
     /*
     public function findOneBySomeField($value): ?Product
     {
